@@ -38,4 +38,6 @@ A simple Java JSP and MySQL web application to record and view daily water intak
 5. Open http://localhost:8080/WaterIntakeLog/
 
 ## Author
-Mayur Patil
+Name: Mayur Patil
+Roll No: MCA-46
+Task Number: Task 46: Water Intake Log
