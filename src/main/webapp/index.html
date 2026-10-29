@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Intake Log</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1f3864;
+        }
+
+        form {
+            width: 270px;
+            margin: auto;
+            padding: 18px;
+            background: white;
+            border: 1px solid #bbb;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin: 8px 0 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background: #1f3864;
+            color: white;
+            padding: 7px 18px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            var glasses = document.getElementById("glasses").value;
+
+            if (glasses === "" || glasses < 0 || glasses > 20) {
+                alert("Enter glasses between 0 and 20.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Water Intake Log</h2>
+
+<form action="result.jsp" method="post"
+      onsubmit="return validateForm()">
+
+    Person Name
+    <input type="text" name="person" required>
+
+    Date
+    <input type="date" name="log_date" required>
+
+    Glasses of Water
+    <input type="number" id="glasses" name="glasses"
+           min="0" max="20" step="1" required>
+
+    <input type="submit" value="Save Record">
+
+</form>
+
+</body>
+</html>
